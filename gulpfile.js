@@ -18,35 +18,35 @@ var fs = require('fs');
 
 // Sass
 gulp.task('sass', function() {
-	return gulp.src(['app/scss/*.scss'])
+	return gulp.src(['sources/scss/*.scss'])
 		.pipe(sass({
 			compass: true
 		}))
 		.pipe(autoprefix())
 		.pipe(csso())
-		.pipe(gulp.dest('app/css'));
+		.pipe(gulp.dest('sources/css'));
 });
 
 // html
 gulp.task('html', function() {
-	gulp.src(['app/partials/index.html'])
-		.pipe(replace("[home-tmpl]", fs.readFileSync('app/partials/home.html', 'utf8')))
-		.pipe(gulp.dest(''));
+	gulp.src(['sources/partials/index.html'])
+		.pipe(replace("[home-tmpl]", fs.readFileSync('sources/partials/home.html', 'utf8')))
+		.pipe(gulp.dest('sources/'));
 });
 
 // Bower
 gulp.task('bower', function() {
-	gulp.src('app/vendor', {
+	gulp.src('sources/vendor', {
 		read: false
 	})
 		.pipe(clean());
 	bower()
-		.pipe(gulp.dest('app/vendor/'));
+		.pipe(gulp.dest('sources/vendor/'));
 });
 
 // Clean
 gulp.task('clean', function() {
-	gulp.src(['app/vendor', 'app/css', 'app/data/data.json'], {
+	gulp.src(['sources/vendor', 'sources/css', 'sources/data/data.json'], {
 		read: false
 	})
 		.pipe(clean());
@@ -55,7 +55,7 @@ gulp.task('clean', function() {
 
 // data
 gulp.task('data', function() {
-	gulp.src(['app/data/data.json'])
+	gulp.src(['sources/data/data.json'])
 		.pipe(gulp.dest('data'));
 });
 
@@ -67,20 +67,20 @@ gulp.task('setup', ['clean', 'bower', 'default']);
 
 // watch
 gulp.task('watch', function() {
-	gulp.watch('app/scss/*.scss', function() {
+	gulp.watch('sources/scss/*.scss', function() {
 		gulp.run('sass');
 	});
-	gulp.watch('app/partials/*.html', function() {
+	gulp.watch('sources/partials/*.html', function() {
 		gulp.run('html');
 	});
 });
 
 gulp.task('build', ['setup'], function() {
 
-	gulp.src(['app/**'])
+	gulp.src(['sources/**'])
 		.pipe(gulp.dest('dist/'));
 
-	gulp.src(['app/**/*.html', 'app/**/*.js', 'app/**/*.css', 'app/.htaccess'])
+	gulp.src(['sources/**/*.html', 'sources/**/*.js', 'sources/**/*.css', 'sources/.htaccess'])
 		.pipe(replace("CACHE_BUST", (new Date()).getTime()))
 		.pipe(gulp.dest('dist/'));
 

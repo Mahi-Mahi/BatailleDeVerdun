@@ -4,13 +4,13 @@
 require.config({
 	urlArgs: "bust=" + 'CACHE_BUST',
 	paths: {
-		angular: '/app/vendor/angular/angular',
-		angularRoute: '/app/vendor/angular-route/angular-route',
-		angularSanitize: '/app/vendor/angular-sanitize/angular-sanitize',
-		angularResource: '/app/vendor/angular-resource/angular-resource',
-		// angularAnimate: '/app/vendor/angular-animate/angular-animate',
-		angularMocks: '/app/vendor/angular-mocks/angular-mocks',
-		text: '/app/vendor/requirejs-text/text'
+		angular: '/vendor/angular/angular',
+		angularRoute: '/vendor/angular-route/angular-route',
+		angularSanitize: '/vendor/angular-sanitize/angular-sanitize',
+		angularResource: '/vendor/angular-resource/angular-resource',
+		// angularAnimate: '/vendor/angular-animate/angular-animate',
+		angularMocks: '/vendor/angular-mocks/angular-mocks',
+		text: '/vendor/requirejs-text/text'
 	},
 	shim: {
 		'angular': {

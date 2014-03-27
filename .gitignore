@@ -5,3 +5,5 @@ app/vendor
 *.scssc
 **-ck.js
 app/css/style.css
+
+*.log
