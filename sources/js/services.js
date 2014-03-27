@@ -9,13 +9,22 @@ define(['angular'], function(angular) {
 		.value('version', '0.1');
 
 	angular.module('dataService', ['ngResource'])
-		.factory('dataService', function($resource) {
-			return $resource('/data/data.json?CACHE_BUST', {}, {
-				getData: {
-					method: 'GET',
-					isArray: false
-				}
+		.service('dataService', function($http) {
+			var myData = null;
+
+			var promise = $http.get('/data/data.object.json?CACHE_BUST', {
+				method: 'GET',
+				cache: true
+			}).success(function(data) {
+				myData = data;
 			});
+			return {
+				promise: promise,
+				getData: function() {
+					return myData;
+				}
+			};
+
 		});
 
 });

@@ -25,7 +25,8 @@ define(['angular', 'app'], function(angular, app) {
 				controller: 'mainCtrl',
 				resolve: {
 					data: function(dataService) {
-						return dataService.getData();
+						console.log("dataService");
+						return dataService.promise;
 					}
 				}
 			});
@@ -35,7 +36,7 @@ define(['angular', 'app'], function(angular, app) {
 				controller: 'resultCtrl',
 				resolve: {
 					data: function(dataService) {
-						return dataService.getData();
+						return dataService.promise;
 					}
 				}
 			});

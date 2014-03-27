@@ -7,6 +7,7 @@ define([
 	'angularRoute',
 	'angularResource',
 	'angularSanitize',
+	'angularLocale',
 	'jquery',
 	'jquerySvg',
 	'jquerySvgDom'
@@ -20,6 +21,7 @@ define([
 		'ngRoute',
 		'ngResource',
 		'ngSanitize',
+		'ngLocale',
 		// 'ngAnimate',
 		'myApp.controllers',
 		'myApp.filters',

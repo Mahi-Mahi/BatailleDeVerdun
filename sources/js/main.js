@@ -10,6 +10,7 @@ require.config({
 		angularResource: '/vendor/angular-resource/angular-resource',
 		// angularAnimate: '/vendor/angular-animate/angular-animate',
 		angularMocks: '/vendor/angular-mocks/angular-mocks',
+		angularLocale: '/js/lib//angular-locale_fr-fr',
 		jquery: '/vendor/jquery/dist/jquery',
 		jquerySvg: '/js/lib/jquery.svg',
 		jquerySvgDom: '/js/lib/jquery.svgdom'
@@ -25,6 +26,10 @@ require.config({
 		'angularMocks': {
 			deps: ['angular'],
 			'exports': 'angular.mock'
+		},
+		'angularLocale': {
+			deps: ['angular'],
+			'exports': 'ngLocale'
 		},
 		'jquerySvg': {
 			deps: ['jquery']
