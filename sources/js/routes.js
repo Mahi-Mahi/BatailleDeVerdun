@@ -15,6 +15,31 @@ define(['angular', 'app'], function(angular, app) {
 				controller: 'homeCtrl'
 			});
 
+			$routeProvider.when('/intro/', {
+				templateUrl: '/partials/intro.html',
+				controller: 'introCtrl'
+			});
+
+			$routeProvider.when('/main/', {
+				templateUrl: '/partials/main.html',
+				controller: 'mainCtrl',
+				resolve: {
+					data: function(dataService) {
+						return dataService.getData();
+					}
+				}
+			});
+
+			$routeProvider.when('/resultat/', {
+				templateUrl: '/partials/result.html',
+				controller: 'resultCtrl',
+				resolve: {
+					data: function(dataService) {
+						return dataService.getData();
+					}
+				}
+			});
+
 			$routeProvider.otherwise({
 				redirectTo: '/'
 			});

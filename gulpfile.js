@@ -46,21 +46,15 @@ gulp.task('bower', function() {
 
 // Clean
 gulp.task('clean', function() {
-	gulp.src(['sources/vendor', 'sources/css', 'sources/data/data.json'], {
+	gulp.src(['sources/vendor', 'sources/css'], {
 		read: false
 	})
 		.pipe(clean());
 
 });
 
-// data
-gulp.task('data', function() {
-	gulp.src(['sources/data/data.json'])
-		.pipe(gulp.dest('data'));
-});
-
 // default
-gulp.task('default', ['sass', 'data']);
+gulp.task('default', ['sass']);
 
 // setup
 gulp.task('setup', ['clean', 'bower', 'default']);

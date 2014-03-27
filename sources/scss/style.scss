@@ -3,3 +3,35 @@
 @import "_elements";
 @import "_global";
 
+
+header {
+	height: 100px;
+	p {
+		display: none;
+	}
+	&.info p {
+		display: block;
+	}
+}
+
+#map {
+	border: 1px solid grey;
+	width: 700px;
+	height: 600px;
+}
+
+.arrdt {
+	polygon, > path, circle {
+		fill-opacity: 0;
+	}
+	&:hover {
+		circle {
+			fill-opacity: 1;
+		}
+	}
+	&.selected {
+		polygon, > path {
+			fill-opacity: 1;
+		}
+	}
+}

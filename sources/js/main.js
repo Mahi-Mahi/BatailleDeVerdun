@@ -10,7 +10,9 @@ require.config({
 		angularResource: '/vendor/angular-resource/angular-resource',
 		// angularAnimate: '/vendor/angular-animate/angular-animate',
 		angularMocks: '/vendor/angular-mocks/angular-mocks',
-		text: '/vendor/requirejs-text/text'
+		jquery: '/vendor/jquery/dist/jquery',
+		jquerySvg: '/js/lib/jquery.svg',
+		jquerySvgDom: '/js/lib/jquery.svgdom'
 	},
 	shim: {
 		'angular': {
@@ -23,6 +25,12 @@ require.config({
 		'angularMocks': {
 			deps: ['angular'],
 			'exports': 'angular.mock'
+		},
+		'jquerySvg': {
+			deps: ['jquery']
+		},
+		'jquerySvgDom': {
+			deps: ['jquerySvg']
 		}
 	},
 	priority: [
