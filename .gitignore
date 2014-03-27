@@ -1,0 +1,7 @@
+node_modules
+components
+bower_components
+app/vendor
+*.scssc
+**-ck.js
+app/css/style.css
