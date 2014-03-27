@@ -1,0 +1,35 @@
+{
+  "name": "Bataille de Verdun",
+  "description": "Bataille de Verdun",
+  "version": "0.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mahi-Mahi/Quizz-Municipales-Paris-2014.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mahi-Mahi/Quizz-Municipales-Paris-2014/issues"
+  },
+  "homepage": "https://github.com/Mahi-Mahi/Quizz-Municipales-Paris-2014",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-bower": "latest",
+    "gulp-csso": "latest",
+    "gulp-replace": "^0.2.0",
+    "gulp-requirejs": "^0.1.3",
+    "gulp-ruby-sass": "latest",
+    "gulp-compass": "^1.1.6",
+    "gulp-sass": "latest",
+    "gulp-uglify": "latest",
+    "gulp-util": "latest",
+    "gulp-exec": "latest",
+    "gulp-spawn": "latest",
+    "gulp-clean": "^0.2.4"
+  }
+}
