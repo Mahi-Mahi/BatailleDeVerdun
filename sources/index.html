@@ -17,13 +17,6 @@
     <!--[if lte IE 8]>
 		<script type="text/javascript" src="/vendor/selectivizr/selectivizr.js"></script>
 	<![endif]-->
-	<!--[if gte IE 9]>
-	  <style type="text/css">
-	    .gradient {
-	       filter: none;
-	    }
-	  </style>
-	<![endif]-->
 </head>
 	<body>
 
@@ -35,16 +28,16 @@
 	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=170137329861440";
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
+		<div class="wrapper">
+			<div ng-view>
+				<a href="/intro/">
+	<img src="/images/bataille-de-verdun-hp.jpg" alt="" />
+	<h1 class="visuallyhidden">Les <span>Morts</span> de la Bataille de Verdun</h1>
+	<h2 class="visuallyhidden">21 février 1916 - 19 décembre 1916</h2>
+	<span class="visuallyhidden">Entrer</span>
+</a>
 
-		<div ng-view>
-			
-
-<h2>21 février 1916 - 19 décembre 1916</h2>
-
-<h1>Les <span>Morts</span> de la Bataille de Verdun</h1>
-
-<a href="/intro/">Entrer</a>
-
+			</div>
 		</div>
 		<script data-main="/js/main" src="/vendor/requirejs/require.js"></script>
 

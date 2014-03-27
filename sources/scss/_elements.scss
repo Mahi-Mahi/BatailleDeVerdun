@@ -1,9 +1,6 @@
 // VARIABLES
 $base-font-size: 16px;
-$default-color:#999;
-$default-link-color:#999;
-$nkm-color:#00a8e6;
-$hidalgo-color:#f03e8d;
+$default-color:#fff;
 
 // OPACITY
 @mixin opacity($value) {
@@ -17,25 +14,6 @@ $hidalgo-color:#f03e8d;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-// IMAGE REPLACEMENT
-@mixin image-replacement($width, $height) {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  height: #{$height}px;
-  width: #{$width}px;
-}
-
-// TEXT WRAP
-@mixin text-wrap() {
-  white-space: pre;
-  white-space: pre-wrap;
-  white-space: pre-line;
-  white-space: -moz-pre-wrap;
-  white-space: -hp-pre-wrap;
-  word-wrap: break-word;
 }
 
 // CSS TRANSITION
@@ -52,17 +30,4 @@ $hidalgo-color:#f03e8d;
 // EM CONVERSION
 @function em($px, $base: $base-font-size) {
     @return ($px / $base) * 1em;
-}
-
-// FONT-FACE
-@mixin font-face($font-family, $file-path, $weight: normal, $style: normal ) {
-  @font-face {
-    font-family: $font-family;
-    font-weight: $weight;
-    font-style: $style;
-      src: url('#{$file-path}.eot');
-      src: url('#{$file-path}.eot?#iefix')               format('embedded-opentype'),
-           url('#{$file-path}.woff')                     format('woff'),
-           url('#{$file-path}.ttf')                      format('truetype')
-  }
-}
+} 

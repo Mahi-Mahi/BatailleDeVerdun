@@ -61,9 +61,9 @@ gulp.task('setup', ['clean', 'bower', 'default']);
 
 // watch
 gulp.task('watch', function() {
-	gulp.watch('sources/scss/*.scss', function() {
-		gulp.run('sass');
-	});
+	// gulp.watch('sources/scss/*.scss', function() {
+	// 	gulp.run('sass');
+	// });
 	gulp.watch('sources/partials/*.html', function() {
 		gulp.run('html');
 	});

@@ -1,31 +1,32 @@
+<div class="wrapper-map">
+	<header>
+		<div class="left">
+			<p>
+				Le
+				<strong class="arrdt"></strong>
+				Arrondissement
+			</p>
+		</div>
+		<div class="right">
+			<p>
+				Population
+				<strong class="pop"></strong>
+				habitants aujourd'hui.
+			</p>
+		</div>
+	</header>
 
-<header>
-	<div class="left">
+	<div id="map" ng-include="'/partials/map.svg'">
+
+	</div>
+
+	<footer>
 		<p>
-			Le
-			<strong class="arrdt"></strong>
-			Arrondissement
+			Nombre de vies perdues selon vous :
+			<strong class="deaths"></strong>
 		</p>
-	</div>
-	<div class="right">
-		<p>
-			Population
-			<strong class="pop"></strong>
-			habitants aujourd'hui.
-		</p>
-	</div>
-</header>
-
-<div id="map" ng-include="'/partials/map.svg'">
-
-</div>
-
-<footer>
-	<p>
-		Nombre de vies perdues selon vous :
-		<strong class="deaths"></strong>
-	</p>
-	<div class="right">
-		<a href="/resultat/">Valider</a>
-	</div>
-</footer>
+		<div class="right">
+			<a href="/resultat/">Valider</a>
+		</div>
+	</footer>
+</div><!-- .wrapper-map -->

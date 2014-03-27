@@ -5,19 +5,97 @@
 
 
 header {
-	height: 100px;
+	background:url(/images/bg-map-header.jpg) left top no-repeat;
+	position:absolute;
+	height: 51px;
+	left:0;
+	top:0;
+	z-index:4;
+	width:100%;
 	p {
 		display: none;
 	}
 	&.info p {
 		display: block;
 	}
+	.left {
+		float: left;
+		display: block;
+		line-height: 51px; 
+		margin: 0;
+		padding: 0;
+		width:260px;
+		p {
+			font-size: 20px; 
+			line-height: 51px; 
+			margin: 0;
+			padding: 0 0 0 15px;
+		}
+	}
+	.right {
+		display: block;
+		float: right;
+		line-height: 51px;
+		margin: 0;
+		padding: 0;
+		width:540px;
+		p {
+			font-size: 20px; 
+			line-height: 51px; 
+			margin: 0;
+			padding: 0 0 0 25px;
+		}
+	 	strong {
+	 		color:#ff3500;
+	 		font-size:30px;
+	 		font-weight: normal;
+	 	}
+	}
 }
 
+footer {
+	background:url(/images/bg-map-footer.jpg) left top no-repeat;
+	position:absolute;
+	height: 55px;
+	left:0;
+	bottom:0;
+	z-index:4;	
+	width:100%;
+	p {
+		color:#fff;
+	 	display: block;
+	 	float: left;
+	 	font-size:20px;
+	 	line-height: 55px; 
+	 	margin: 0;
+	 	padding: 0 0 0 25px;
+	 	strong {
+	 		color:#ff3500;
+	 		font-size:30px;
+	 		font-weight: normal;
+	 	}
+	}
+	.right {
+		float: right;
+		font-size:20px;
+		line-height: 55px; 
+		text-transform: uppercase;
+		a {
+			padding:0 35px 0 0;
+		}
+	}
+}
+
+
+
 #map {
-	border: 1px solid grey;
-	width: 700px;
+	position:absolute;
+	left:0;
+	top:0;
+	width: 800px;
 	height: 600px;
+	z-index:3;
+	cursor:pointer;
 }
 
 .arrdt {
