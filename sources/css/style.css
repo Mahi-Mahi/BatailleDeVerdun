@@ -87,7 +87,10 @@ body > div {
   padding: 0;
   width: 800px; }
 
-.ng-scope .wrapper-home {
+.cssanimations .wrapper-home {
+  display: none; }
+
+.cssanimations .ng-scope .wrapper-home {
   display: block;
   -webkit-animation-name: fadeInDownBig;
   animation-name: fadeInDownBig;
@@ -156,21 +159,22 @@ body > div {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
-.wrapper-results {
+.cssanimations .wrapper-results {
   background: url(/images/bg-results.jpg) left top no-repeat;
   display: none;
   height: 600px;
   width: 100%;
   display: none;
   position: relative; }
-  .ng-scope .wrapper-results {
-    display: table;
-    -webkit-animation-name: fadeInDownBig;
-    animation-name: fadeInDownBig;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both; }
+
+.cssanimations .ng-scope .wrapper-results {
+  display: table;
+  -webkit-animation-name: fadeInDownBig;
+  animation-name: fadeInDownBig;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
 
 .wrapper-results__inner {
   display: table-cell;
