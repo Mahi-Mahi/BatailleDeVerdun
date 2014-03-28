@@ -87,11 +87,28 @@ body > div {
   padding: 0;
   width: 800px; }
 
+.wrapper-home {
+  display: none; }
+  .ng-scope .wrapper-home {
+    display: block;
+    -webkit-animation-name: fadeInDownBig;
+    animation-name: fadeInDownBig;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both; }
+
 .wrapper-intro {
   background: url(/images/bg-intro.jpg) left top no-repeat;
   display: table;
   height: 600px;
-  width: 100%; }
+  width: 100%;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
 
 .wrapper-intro__inner {
   display: table-cell;
@@ -133,13 +150,29 @@ body > div {
   height: 600px;
   position: relative;
   width: 100%;
-  z-index: 1; }
+  z-index: 1;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
 
 .wrapper-results {
   background: url(/images/bg-results.jpg) left top no-repeat;
-  display: table;
+  display: none;
   height: 600px;
-  width: 100%; }
+  width: 100%;
+  display: none;
+  position: relative; }
+  .ng-scope .wrapper-results {
+    display: table;
+    -webkit-animation-name: fadeInDownBig;
+    animation-name: fadeInDownBig;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both; }
 
 .wrapper-results__inner {
   display: table-cell;
@@ -154,15 +187,101 @@ body > div {
   display: block;
   font: normal 20px/1.3 Arial, Verdana, sans-serif;
   margin: 0;
-  padding: 90px 0 0 0;
+  padding: 100px 0 40px 35px;
   text-align: left; }
   .wrapper-results__body p {
     display: block;
     margin: 0;
-    padding: 0; }
+    padding: 0 0 20px 0; }
   .wrapper-results__body strong {
     color: #ff3500;
     font-weight: normal; }
+
+.wrapper-results_footer__list {
+  padding: 0 107px 0 0;
+  text-align: right; }
+  .wrapper-results_footer__list li {
+    display: inline-block;
+    margin: 0 1px 0 0;
+    padding: 0;
+    vertical-align: top;
+    position: relative;
+    top: 14px; }
+  .wrapper-results_footer__list li.social-share__twitter, .wrapper-results_footer__list li.social-share__facebook, .wrapper-results_footer__list li.bt-back {
+    height: 58px;
+    line-height: 58px;
+    text-align: center;
+    width: 150px; }
+    .wrapper-results_footer__list li.social-share__twitter a, .wrapper-results_footer__list li.social-share__facebook a, .wrapper-results_footer__list li.bt-back a {
+      color: #fff;
+      display: block;
+      float: left;
+      font-size: 22px;
+      height: 58px;
+      line-height: 58px;
+      margin: 0;
+      padding: 0;
+      text-transform: uppercase;
+      width: 100%; }
+  .wrapper-results_footer__list li.social-share__twitter {
+    width: 57px; }
+
+.ask-media {
+  display: block;
+  height: 55px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 165px; }
+  .ask-media a {
+    display: block;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%; }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
+@keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-1000px);
+    -ms-transform: translateY(-1000px);
+    transform: translateY(-1000px); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0); } }
 
 header {
   background: url(/images/bg-map-header.jpg) left top no-repeat;
@@ -228,10 +347,11 @@ footer {
   footer .right {
     float: right;
     font-size: 20px;
-    line-height: 55px;
     text-transform: uppercase; }
     footer .right a {
-      padding: 0 35px 0 0; }
+      display: block;
+      line-height: 55px;
+      padding: 0 35px; }
 
 #map {
   position: absolute;

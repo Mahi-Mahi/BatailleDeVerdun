@@ -72,16 +72,17 @@ footer {
 	 	strong {
 	 		color:#ff3500;
 	 		font-size:30px;
-	 		font-weight: normal;
+	 		font-weight: normal; 
 	 	}
 	}
 	.right {
 		float: right;
-		font-size:20px;
-		line-height: 55px; 
+		font-size:20px; 
 		text-transform: uppercase;
 		a {
-			padding:0 35px 0 0;
+			display: block;
+			line-height: 55px;
+			padding:0 35px;
 		}
 	}
 }
