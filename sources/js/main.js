@@ -1,8 +1,10 @@
 /* global require */
 /* global angular */
 
+var CACHE_BUST = new Date().getTime();
+
 require.config({
-	urlArgs: "bust=" + 'CACHE_BUST',
+	urlArgs: "bust=" + CACHE_BUST,
 	paths: {
 		angular: '/vendor/angular/angular',
 		angularRoute: '/vendor/angular-route/angular-route',
@@ -12,12 +14,15 @@ require.config({
 		angularMocks: '/vendor/angular-mocks/angular-mocks',
 		angularLocale: '/js/lib//angular-locale_fr-fr',
 		jquery: '/vendor/jquery/dist/jquery',
+		jqueryMigrate: '/vendor/jquery-migrate/jquery-migrate',
 		jquerySvg: '/js/lib/jquery.svg',
-		jquerySvgDom: '/js/lib/jquery.svgdom'
+		jquerySvgDom: '/js/lib/jquery.svgdom',
+
 	},
 	shim: {
 		'angular': {
-			'exports': 'angular'
+			'exports': 'angular',
+			deps: ['jquery', 'jqueryMigrate']
 		},
 		'angularRoute': ['angular'],
 		'angularSanitize': ['angular'],
@@ -31,8 +36,11 @@ require.config({
 			deps: ['angular'],
 			'exports': 'ngLocale'
 		},
-		'jquerySvg': {
+		'jqueryMigrate': {
 			deps: ['jquery']
+		},
+		'jquerySvg': {
+			deps: ['jqueryMigrate']
 		},
 		'jquerySvgDom': {
 			deps: ['jquerySvg']

@@ -13,21 +13,27 @@ define([], function() {
 
 		jQuery('#map .arrdt')
 			.hover(function() {
+					console.log("over " + jQuery(this).data('arrdt'));
 					jQuery('header .arrdt').html(jQuery(this).data('arrdt') + ((jQuery(this).data('arrdt') > 1 ? '<sup>ème</sup>' : '<sup>er</sup>')));
 					jQuery('header .pop').text(arrdts[jQuery(this).data('arrdt')]);
 					jQuery('header').addClass('info');
 				},
-				function() {})
+				function() {
+					console.log("out " + jQuery(this).data('arrdt'));
+				})
 			.on('click', function() {
+				console.log("click " + jQuery(this).data('arrdt'));
 				jQuery(this).toggleClass('selected');
 				updateCount();
 			});
 		jQuery('#map').hover(function() {}, function() {
+			console.log("out map");
 			jQuery('header .arrdt').text('');
 			jQuery('header').removeClass('info');
 		});
 
 		var updateCount = function() {
+			console.log("updateCount");
 			var total = 0;
 			$rootScope.selected_arrdts = [];
 			jQuery('.selected').each(function(idx, item) {

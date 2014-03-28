@@ -9,6 +9,7 @@ define([
 	'angularSanitize',
 	'angularLocale',
 	'jquery',
+	'jqueryMigrate',
 	'jquerySvg',
 	'jquerySvgDom'
 	// 'angularAnimate',
