@@ -80,9 +80,13 @@ footer {
 		font-size:20px; 
 		text-transform: uppercase;
 		a {
+			@include transition(all .5s linear);
 			display: block;
+			height: 55px;
 			line-height: 55px;
-			padding:0 35px;
+			padding:0;
+			text-align: center;
+			width:150px;
 			&:hover {
 				background:#ff3500;
 			}

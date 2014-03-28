@@ -410,9 +410,19 @@ footer {
     font-size: 20px;
     text-transform: uppercase; }
     footer .right a {
+      -webkit-transition: all 0.5s linear;
+      -moz-transition: all 0.5s linear;
+      -o-transition: all 0.5s linear;
+      -ms-transition: all 0.5s linear;
+      transition: all 0.5s linear;
+      -webkit-backface-visibility: hidden;
+      -webkit-transform: translate3d(0, 0, 0);
       display: block;
+      height: 55px;
       line-height: 55px;
-      padding: 0 35px; }
+      padding: 0;
+      text-align: center;
+      width: 150px; }
       footer .right a:hover {
         background: #ff3500; }
 
