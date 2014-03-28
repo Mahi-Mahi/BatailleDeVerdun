@@ -87,33 +87,6 @@ body > div {
   padding: 0;
   width: 800px; }
 
-.wrapper-home {
-  position: relative;
-  z-index: 1; }
-  .wrapper-home span {
-    -webkit-transition: all 0.5s linear;
-    -moz-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
-    -ms-transition: all 0.5s linear;
-    transition: all 0.5s linear;
-    -webkit-backface-visibility: hidden;
-    -webkit-transform: translate3d(0, 0, 0);
-    color: #fff;
-    font-size: 24px;
-    display: block;
-    margin: 0 0 0 -108px;
-    position: absolute;
-    height: 35px;
-    line-height: 35px;
-    left: 50%;
-    bottom: 45px;
-    text-align: center;
-    text-transform: uppercase;
-    width: 200px;
-    z-index: 4; }
-    .wrapper-home span:hover {
-      background: #ff3500; }
-
 .cssanimations .wrapper-home {
   display: none; }
 
@@ -162,27 +135,15 @@ body > div {
     font-weight: normal; }
 
 .bt-continue {
-  padding: 31px 0 0 0;
+  padding: 30px 0 0 0;
   text-align: right; }
   .bt-continue span {
-    -webkit-transition: all 0.5s linear;
-    -moz-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
-    -ms-transition: all 0.5s linear;
-    transition: all 0.5s linear;
-    -webkit-backface-visibility: hidden;
-    -webkit-transform: translate3d(0, 0, 0);
+    background: #ff3500;
     display: inline-block;
-    height: 35px;
-    line-height: 35px;
     margin: 0;
-    padding: 0;
+    padding: 9px 55px;
     text-transform: uppercase;
-    text-align: center;
-    vertical-align: top;
-    width: 200px; }
-    .bt-continue span:hover {
-      background: #ff3500; }
+    vertical-align: top; }
 
 .wrapper-map {
   background: url(/images/bg-map.jpg) left top no-repeat;

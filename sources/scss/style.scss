@@ -83,6 +83,9 @@ footer {
 			display: block;
 			line-height: 55px;
 			padding:0 35px;
+			&:hover {
+				background:#ff3500;
+			}
 		}
 	}
 }

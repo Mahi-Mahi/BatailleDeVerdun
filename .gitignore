@@ -7,3 +7,5 @@ app/vendor
 app/css/style.css
 
 *.log
+
+sources/compass_app_log.txt
