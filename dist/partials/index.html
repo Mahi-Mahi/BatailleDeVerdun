@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]> <html xmlns:ng="http://angularjs.org" class="no-js ie7 oldie" lang="fr" id="ng-app" ng-app> <![endif]-->
+<!--[if IE 8]> <html xmlns:ng="http://angularjs.org" class="no-js ie8 oldie" lang="fr" id="ng-app" ng-app> <![endif]-->
+<!--[if gt IE 8]><!--> <html xmlns:ng="http://angularjs.org" class="no-js" lang="fr" id="ng-app" ng-app> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<title>Les Morts de la Bataille de Verdun </title>
+    <meta name="viewport" content="width=800" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<meta property="og:locale" content="fr_FR" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Les morts de la Bataille de Verdun - A l'échelle de Paris, sauriez-vous évaluer le nombre de vies perdues lors de ces combats ? " />
+	<meta property="og:url" content="http://askmedia.fr/blog/bataille-de-verdun/" />
+	<meta property="og:site_name" content="Les morts de la Bataille de Verdun" />
+
+	<link rel="stylesheet" href="/css/style.css?CACHE_BUST" media="all" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<script type="text/javascript" src="/vendor/modernizr/modernizr.js"></script>
+	<!--[if lte IE 7]>
+        <script src="/vendor/json3/lib/json3.min.js"></script>
+      <![endif]-->
+    <!--[if lte IE 8]>
+		<script type="text/javascript" src="/vendor/selectivizr/selectivizr.js"></script>
+	<![endif]-->
+</head>
+	<body>
+
+		<div class="wrapper">
+			<div ng-view>
+				[home-tmpl]
+			</div>
+		</div>
+
+		<script data-main="/js/main" src="/vendor/requirejs/require.js"></script>
+
+	</body>
+</html>

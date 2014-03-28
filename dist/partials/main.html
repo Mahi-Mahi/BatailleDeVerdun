@@ -1,0 +1,32 @@
+<div class="wrapper-map">
+	<header>
+		<div class="left">
+			<p>
+				Le
+				<strong class="arrdt"></strong>
+				arrondissement
+			</p>
+		</div>
+		<div class="right">
+			<p>
+				Population :
+				<strong class="pop"></strong>
+				habitants aujourd'hui
+			</p>
+		</div>
+	</header>
+
+	<div id="map" ng-include="'/partials/map.svg'">
+
+	</div>
+
+	<footer>
+		<p>
+			Nombre de vies perdues selon vous :
+			<strong class="deaths"></strong>
+		</p>
+		<div class="right">
+			<a href="/resultat/">Valider</a>
+		</div>
+	</footer>
+</div><!-- .wrapper-map -->

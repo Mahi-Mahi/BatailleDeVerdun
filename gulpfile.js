@@ -7,6 +7,7 @@ var gulp = require('gulp');
 var spawn = require('child_process').spawn;
 var gutil = require('gulp-util');
 var bower = require('gulp-bower');
+var uglify = require('gulp-uglify');
 
 var autoprefix = require('gulp-autoprefixer');
 var csso = require('gulp-csso');
@@ -77,5 +78,11 @@ gulp.task('build', ['setup'], function() {
 	gulp.src(['sources/**/*.html', 'sources/**/*.js', 'sources/**/*.css', 'sources/.htaccess'])
 		.pipe(replace("CACHE_BUST", (new Date()).getTime()))
 		.pipe(gulp.dest('dist/'));
+
+	gulp.src('sources/js/*.js')
+		.pipe(uglify({
+			outSourceMap: false
+		}))
+		.pipe(gulp.dest('dist'))
 
 });

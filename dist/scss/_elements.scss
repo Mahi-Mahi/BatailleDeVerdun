@@ -1,0 +1,33 @@
+// VARIABLES
+$base-font-size: 16px;
+$default-color:#fff;
+
+// OPACITY
+@mixin opacity($value) {
+  opacity: $value / 100;
+  -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=#{$value})";
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$value});
+}
+
+// BOX-SIZING
+@mixin border-box-sizing() {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// CSS TRANSITION
+@mixin transition($transition) {
+  -webkit-transition:$transition;
+  -moz-transition:$transition;
+  -o-transition:$transition;
+  -ms-transition:$transition;
+  transition:$transition;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);      
+}
+
+// EM CONVERSION
+@function em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
+} 

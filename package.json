@@ -26,7 +26,7 @@
     "gulp-ruby-sass": "latest",
     "gulp-compass": "^1.1.6",
     "gulp-sass": "latest",
-    "gulp-uglify": "latest",
+    "gulp-uglify": "^0.2.1",
     "gulp-util": "latest",
     "gulp-exec": "latest",
     "gulp-spawn": "latest",
