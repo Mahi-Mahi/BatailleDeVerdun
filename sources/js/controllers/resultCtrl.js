@@ -55,6 +55,8 @@ define([], function() {
 					deaths += arrdts[parseInt(arrdt, 10)];
 				});
 				jQuery('.deaths').text($filter('number')(deaths));
+				if (deaths < 300000)
+					jQuery('.alert').show();
 
 			}
 		}
